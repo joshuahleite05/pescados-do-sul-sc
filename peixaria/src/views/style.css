@@ -1,0 +1,286 @@
+/* Reset e configuração base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #2E3A59;
+    scroll-behavior: smooth;
+}
+
+/* Variáveis */
+:root {
+    --primary: #6AB0D1;
+    --secondary: #A7C6ED;
+    --accent: #F4A300;
+    --background: #FAFAFA;
+    --background-light: #FFFFFF;
+    --background-dark: #E1E8F0;
+    --text-primary: #2E3A59;
+    --text-secondary: #4F5B73;
+    --border: #A7C6ED;
+    --border-accent: var(--accent);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    display: inline-block;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+nav {
+    float: right;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--background);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: transform 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('./3371.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 20px;
+    color: var(--background);
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.hero .cta-button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    background-color: var(--accent);
+    color: var(--background);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: #F17F00;
+}
+
+/* Sobre */
+.about {
+    padding: 50px 20px;
+    background-color: var(--background-light);
+    text-align: center;
+}
+
+.about h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 auto;
+    width: 70%;
+}
+
+/* Produtos */
+.products {
+    padding: 50px 20px;
+    background-color: var(--background-dark);
+}
+
+.products h3 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.product-card {
+    background-color: var(--background-light);
+    border-radius: 10px;
+    width: calc(33.33% - 20px);
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-card p {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.product-card .cta-button {
+    padding: 12px 30px;
+    background-color: var(--accent);
+    color: var(--background);
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card:hover .cta-button {
+    background-color: #F17F00;
+}
+
+/* Contato */
+.contact {
+    padding: 50px 20px;
+    background-color: var(--background-light);
+    text-align: center;
+}
+
+.contact h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact form label {
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--background-light);
+    transition: border-color 0.3s ease;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+.contact form button {
+    background-color: var(--accent);
+    color: var(--background);
+    font-size: 1.2em;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #F17F00;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 20px);
+    }
+
+    .product-cards {
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .contact form {
+        width: 90%;
+    }
+}
